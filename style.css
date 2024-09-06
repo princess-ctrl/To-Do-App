@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+  --primary-color: #003049;
+  --primary-color-light: #669bbc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: 'Lato' sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--primary-color);
+}
+
+.todo_container {
+  width: 100%;
+  max-width: 35rem;
+  background-color: #fff;
+  padding: 2.5rem 1.5rem 8rem;
+  margin: 5rem auto 2rem;
+  border-radius: 1%;
+  position: relative;
+}
+
+.todo_container h3 {
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eee;
+  border-radius: 10rem;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.todo_list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+
+  /* box-shadow: 1.5rem 2rem, 4rem rgba(0, 0, 0, 0.5);
+  background-color: beige;
+  margin-bottom: 1rem; */
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+
+.todo__text {
+  flex-grow: 1;
+}
+
+.edit,
+.delete,
+.check {
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.btn-small {
+  border: none;
+  outline: none;
+  padding: 0.8rem;
+  color: #fff;
+  border-radius: 2rem;
+}
+
+.delete {
+  background-color:#c1121f;
+}
+
+.edit {
+  background-color: var(--primary-color);
+}
+
+.check {
+  background-color: #780000;
+}
+
+.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+.hidden {
+  display: none;
+}
+
+.message {
+  position: absolute;
+  top: 1rem;
+  right: 0.4rem;
+  background-color:#c1121f;
+  color: #fff;
+  padding: 0.7rem;
+  border-radius: 2rem;
+  transition: all 0.2s;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 530px) {
+  .todo_container {
+    padding: 2.5rem 1rem 8rem;
+  }
+
+  .btn {
+    padding: 1.1rem;
+  }
+
+  .btn-small {
+    padding: 0.7rem;
+  }
+
+  .edit,
+  .delete,
+  .check {
+    font-size: 0.8rem;
+    margin-left: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .container {
+    padding: 1rem;
+  }
+  .todo_container {
+    padding: 2.5rem 0.1rem 8rem;
+  }
+
+  .btn {
+    padding: 1rem;
+  }
+
+  .btn-small {
+    padding: 0.6rem;
+  }
+
+  .edit,
+  .delete,
+  .check {
+    font-size: 0.5rem;
+    margin-left: 1rem;
+  }
+}
